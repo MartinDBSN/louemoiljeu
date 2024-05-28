@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6,
     too_short: "6 characters is the minimun allowed" }
+
+  has_many :games, dependent: :destroy
 end
