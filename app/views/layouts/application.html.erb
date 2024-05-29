@@ -11,6 +11,19 @@
   </head>
 
   <body>
+  <div class="navbar" style="padding: 1em 2em;background-color:#1B1B1B;">
+  <%= link_to root_path do%>
+    <%= image_tag "louemoiljeu-logo.png", alt: 'Logo', width: 200%>
+    <% end %>
+    <div>
+    <%= link_to new_user_session_path  do %>
+      <button style="border-radius: 10px; border-color:#D9D9D6; background-color:#1B1B1B; color:#D9D9D6;padding:5px 20px;margin-right:0.5em;">Login</button>
+      <% end %>
+       <%= link_to new_user_registration_path  do %>
+      <button style="border-radius: 10px; border-color:white;color:#1B1B1B; background-color:#D9D9D6;padding:5px 20px;">Sign up_</button>
+      <% end %>
+    </div>
+  </div>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
