@@ -1,6 +1,17 @@
-<div class="position-relative">
-    <h1><%= @game.name %></h1>
-    <h3><%= @game.platform %></h3>
-    <h3><%= @game.genre %></h3>
-    <h3><%= @game.price %></h3>
-</div>
+<div class = "container-game-show">
+  <div class = "big-container-show">
+    <img class="align-self-start mr-3" src="https://media.istockphoto.com/id/1208386205/vector/joystick-flat-icon-playing-online-gamepad-cartoon-icon-game-controller.jpg?s=612x612&w=0&k=20&c=0UCu7wJNNjJpIaUXe6zyLLXEk3ZX2onolq5aBrbQQY8=" alt="Game image">
+    <div class="container-text-show">
+          <h1><%= @game.name.upcase %></h1>
+          <div class="mt-0">
+            <div class="d-inline p-2 bg-primary text-white rounded"><%= @game.platform.upcase %></div>
+            <div class="d-inline p-2 bg-dark text-white rounded"><%= @game.genre.upcase %></div>
+            <div class="d-inline p-2 bg-warning text-dark rounded"><%= @game.price %> €/day</div>
+            <p>Description of the game</p>
+            <div class="container-calendar">
+            </div>
+            <button class="book-btn">Book this game</button>
+          </div>
+      </div>
+    </div>
+  </div>
