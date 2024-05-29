@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+</style>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body style="background-color:#1B1B1B;">
   <div class="navbar" style="padding: 1em 2em;background-color:#1B1B1B;">
   <%= link_to root_path do%>
     <%= image_tag "louemoiljeu-logo.png", alt: 'Logo', width: 200%>
