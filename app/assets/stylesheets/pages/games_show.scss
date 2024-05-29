@@ -1,0 +1,32 @@
+#gamepicture {
+  img {}
+}
+
+.container-game-show {
+  background-color: black
+}
+
+.big-container-show {
+  display: flex;
+  padding: 80px
+}
+
+.container-text-show {
+  margin: 15px
+}
+
+h1 {
+  color: white
+}
+
+.book-btn {
+  background-color: rgb(235, 216, 7);
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.book-btn:hover {
+  background-color: #292929;
+  color: rgb(235, 216, 7);
+  transition: 0.6s ease
+}
