@@ -3,30 +3,35 @@
 }
 
 .container-game-show {
-  background-color: black
+  background-color: $almost-black;
+  h1 {
+    color: $cream-gray;
+}
 }
 
 .big-container-show {
   display: flex;
-  padding: 80px
+  padding: 80px;
 }
 
 .container-text-show {
-  margin: 15px
-}
-
-h1 {
-  color: white
+  margin: 15px;
 }
 
 .book-btn {
-  background-color: rgb(235, 216, 7);
+  background-color: $yellow;
   padding: 10px;
   border-radius: 16px;
+  margin-left: auto;
 }
 
 .book-btn:hover {
-  background-color: #292929;
-  color: rgb(235, 216, 7);
-  transition: 0.6s ease
+  background-color: $almost-black;
+  color: $cream-gray;
+  transition: 0.6s ease;
+}
+
+.game-description {
+  margin: 20px;
+  color: $cream-gray;
 }
