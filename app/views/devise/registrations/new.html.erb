@@ -1,9 +1,11 @@
-<h2>Sign up</h2>
+<div style="width:90%;margin:auto;">
+
+<h2 style="color:#D9D9D6">Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div style="color:#D9D9D6" class="form-inputs">
     <%= f.input :username,
                 required: true,
                 autofocus: true,
@@ -22,8 +24,9 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
