@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/games', to: 'games#index', as: :games
   get "/games/:id", to: "games#show", as: :game
+  get "/games/new", to: "games#new", as: :new_game
+  post "/games", to: "games#create"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
