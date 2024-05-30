@@ -10,3 +10,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#log-in-button {
+  font-family: $monument-regular-font;
+  font-size: 13px;
+}
+
+
+#log-in-button:hover {
+  opacity: 70%;
+  transition: 0.2s ease;
+}
+
+#sign-up-button {
+  font-family: $monument-regular-font;
+  font-size: 13px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#sign-up-button:hover {
+  opacity: 70%;
+  transition: 0.2s ease;
+}
