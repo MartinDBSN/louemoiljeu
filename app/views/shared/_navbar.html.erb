@@ -1,0 +1,40 @@
+<div style="background-color:#1B1B1B;"class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path do %>
+      <%= image_tag "louemoiljeu-logo.png", width: 200%>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Browse all games", games_path, style: "color:#D9D9D6;", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag "https://cdn.dribbble.com/users/567082/screenshots/4356358/profile_picture.png", class: "avatar", alt: "dropdown menu" %>
+          </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Rentals", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+            <%= link_to new_user_session_path do%>
+      <button style="border-radius: 10px; border-color:#D9D9D6; background-color:#1B1B1B; color:#D9D9D6;padding:5px 20px;margin-right:0.5em;">Login</button>
+            <% end %>
+
+            <%= link_to new_user_registration_path  do %>
+      <button style="border-radius: 10px; border-color:white;color:#1B1B1B; background-color:#D9D9D6;padding:5px 20px;">Sign up_</button>
+      <% end %>
+
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
