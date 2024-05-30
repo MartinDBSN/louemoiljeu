@@ -46,6 +46,7 @@ gem "bootsnap", require: false
 
 # manually imported
 gem "devise"
+gem "flatpickr"
 
 # automatically imported
 gem "bootstrap", "~> 5.2"

@@ -1,5 +1,5 @@
-#gamepicture {
-  img {}
+.game-image {
+  width: 30%;
 }
 
 .container-game-show {
@@ -11,16 +11,17 @@
 
 .big-container-show {
   display: flex;
-  padding: 80px;
+  padding: 70px;
+  padding-left: 150px;
 }
 
 .container-text-show {
-  margin: 15px;
+  margin-left: 50px;
 }
 
 .book-btn {
   background-color: $yellow;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 16px;
   margin-left: auto;
 }
@@ -35,6 +36,3 @@
   margin: 20px;
   color: $cream-gray;
 }
-
-
-// this is just a comment
