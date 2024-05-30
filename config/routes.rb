@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  # INDEX GAMES
   get '/games', to: 'games#index', as: :games
   get "/games/:id", to: "games#show", as: :game
 

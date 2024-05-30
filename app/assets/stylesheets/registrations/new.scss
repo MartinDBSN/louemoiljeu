@@ -1,14 +1,4 @@
-// Specific CSS for your home-page
-a {
-  text-decoration: none;
-}
-
-.card-home:hover {
-  opacity: 80%;
-  transition: 0.5s ease;
-}
-
-.search-button-home {
+.button-submit {
   background-color: $yellow;
   border-radius: 15px;
   padding: 15px;
@@ -18,7 +8,7 @@ a {
   padding-right: 40px;
 }
 
-.search-button-home:hover {
+.button-submit:hover {
   color: white;
   background-color: $turquoise;
   opacity: 80%;
