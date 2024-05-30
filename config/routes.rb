@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get '/games', to: 'games#index', as: :games
-  get '/games/:id', to: 'games#show', as: :game
+  get "/games/:id", to: "games#show", as: :game
+  get "/games/new", to: "games#new", as: :new_game
+  post "/games", to: "games#create"
 
-  get '/games/new', to: 'games#new', as: :new_game
 
   # RENTALS
   get '/rentals', to: 'rentals#index'

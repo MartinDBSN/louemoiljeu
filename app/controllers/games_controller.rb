@@ -12,4 +12,9 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @rental = Rental.new
   end
+
+  def new
+    @game = Game.new
+    @game.save
+  end
 end
