@@ -1,7 +1,17 @@
 .game-card {
   background-color: $cream-gray;
   border-radius: 20px;
-  height: 380px;
+  height: 300px;
+  width: 21%;
   min-width: 250px;
   flex-grow: 1;
+
+  h3 {
+    font-family: $monument-regular-font;
+  }
+
+  h4 {
+    font-family: $monument-regular-font;
+    font-size: 12px;
+  }
 }
