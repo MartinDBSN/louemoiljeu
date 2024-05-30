@@ -21,6 +21,7 @@
 
 .book-btn {
   background-color: $yellow;
+  margin: 30px;
   padding: 10px 20px;
   border-radius: 16px;
   margin-left: auto;
@@ -29,10 +30,14 @@
 .book-btn:hover {
   background-color: $almost-black;
   color: $cream-gray;
-  transition: 0.6s ease;
+  transition: 0.4s ease;
 }
 
 .game-description {
   margin: 20px;
+  color: $cream-gray;
+}
+
+.container-calendar {
   color: $cream-gray;
 }
