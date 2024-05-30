@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/games/new', to: 'games#new', as: :new_game
 
-  get 'users/:id/rentals', to: 'rentals#index', as: :rentals
+  get 'users/:id/rentals', to: 'pages#user', as: :rentals
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
