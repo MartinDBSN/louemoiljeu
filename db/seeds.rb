@@ -1,6 +1,10 @@
 
+
 require "open-uri"
 
+Rental.destroy_all
+Game.destroy_all
+User.destroy_all
 
 users = [
   {
@@ -96,12 +100,16 @@ images  = ["https://image.jeuxvideo.com/images-sm/p2/m/o/mohfp20f.jpg",
   "https://image.jeuxvideo.com/medias/148285/1482845269-1018-jaquette-avant.jpg"
 ]
 
-games.each_with_index do |game, i|
-  game = Game.create!(game[:game])
-  p game
-  image = URI.open(images[i])
-  game.photo.attach(io: image, filename: "#{game.name}.jpg")
+games.each do |game|
+  Game.create!(game)
 end
+
+# games.each_with_index do |game, i|
+#   game = Game.create!(game)
+#   p game
+#   image = URI.open(images[i])
+#   game.photo.attach(io: image, filename: "#{game.name}.jpg")
+# end
 
 puts "Created #{Game.count} games!"
 
