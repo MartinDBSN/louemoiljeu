@@ -2,6 +2,10 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
     @games = Game.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR genre ILIKE :query OR platform ILIKE :query"
+      @games = @games.where(sql_subquery, query:"%#{params[:query]}%")
+    end
   end
 
   def new

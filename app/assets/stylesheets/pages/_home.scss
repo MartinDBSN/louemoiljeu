@@ -24,3 +24,13 @@ a {
   opacity: 80%;
   transition: 0.2s ease;
 }
+
+.placeholder-grey::placeholder {
+color: $cream-gray;
+}
+
+.form-control{
+
+color: $cream-gray!important;
+
+}

@@ -5,52 +5,45 @@
   <div style="margin-bottom:0.5em;background-color:#3D72A9;height:1em;"></div>
   <div style="background-color:#E9C40E;height:1em;"></div>
   </div>
-  <div class="mt-2"style="display:flex; justify-content:space-between;">
-    <input  class="m-1"placeholder="Name"style="border-radius:15px;background-color:#1B1B1B;border-color:#D9D9D6;"type="text">
-    <select class="m-1 form-control" style="border-radius:15px;background-color:#1B1B1B;border-color:#D9D9D6;" name="Category" id=""></select>
-    <select class="m-1 form-control"  style="border-radius:15px;background-color:#1B1B1B;border-color:#D9D9D6;" name="Platform" id=""></select>
-    <submit class="m-1 btn search-button-home">Search</submit>
+  <div class="mt-2"style="display:flex; justify-content:center;">
+  <%= form_with url: games_path, method: :get, class: "d-flex" do%>
+  <%= text_field_tag :query, params[:query], style: "width:69vw;border-radius:15px;background-color:#1B1B1B;border-color:#D9D9D6;", class: "placeholder-grey rounded form-control", placeholder: "Type a keyword" %>
+  <%= submit_tag "Search", name:"", class: "m-1 btn search-button-home" %>
+  <% end %>
   </div>
   <div class="mb-2 mt-2" style="border-radius:15px;padding-top:1em;text-transform:uppercase;color:#D9D9D6;text-align:center;background-color:#3D72A9;height:5em">
   <h2 style="font-weight:bold;font-family:syne;">Best categories</h2>
   </div>
-  <%= link_to "BROWSE ALL GAMES", games_path %>
   <div class="d-flex">
 
-   <div style="height:15em;background-color:#D9D9D6; border-radius:15px;" class="d-flex flex-column justify-content-between mb-auto col-4 m-1 p-2 card-body card-home">
+     <%= link_to "/games?query=Platformers", class: "d-flex flex-column justify-content-between  game-category" do%>
       <%= image_tag "icon.png", alt: "icon", width: 50 %>
-    <div class="d-flex justify-content-between">
+      <div>
      <h3 style="font-size:1.5em;" class="card-title">Platformers</h3>
      <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
-     </div>
     </div>
-    <%# <%= link_to games_path do %>
-   <div style="height:15em;background-color:#D9D9D6; border-radius:15px;" class="d-flex flex-column justify-content-between mb-auto col-4 m-1 p-2 card-body card-home">
-      <%= image_tag "bullets.png", alt: "Bullets", width: 50 %>
-    <div class="mt-5 d-flex justify-content-between">
+    <% end %>
+     <%= link_to "/games?query=FPS", class: "d-flex flex-column justify-content-between  game-category" do%>
+      <%= image_tag "bullets.png", alt: "bullets", width: 50 %>
+      <div>
      <h3 style="font-size:1.5em;" class="card-title">FPS</h3>
      <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
-     </div>
     </div>
-    <%# <% end %>
-    <%# <%= link_to games_path do%>
-   <div style="height:15em;background-color:#D9D9D6; border-radius:15px;" class="d-flex flex-column justify-content-between mb-auto col-4 m-1 p-2 card-body card-home">
+    <% end %>
+    <%= link_to "/games?query=Action-RPG", class: "d-flex flex-column justify-content-between  game-category" do%>
       <%= image_tag "sword.png", alt: "sword", width: 50 %>
-    <div class="mt-5 d-flex justify-content-between">
-     <h3 style="font-family:;font-size:1.5em;" class="card-title">Action-RPG</h3>
+      <div>
+     <h3 style="font-size:1.5em;" class="card-title">Action-RPG</h3>
      <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
-     </div>
     </div>
-    <%# <% end %>
-    <%# <%= link_to games_path do%>
-   <div style="height:15em;background-color:#D9D9D6; border-radius:15px;" class="d-flex flex-column justify-content-between mb-auto col-4 m-1 p-2 card-body card-home">
-      <%= image_tag "pyramid.png", alt: "Pyramid", width: 50 %>
-    <div class="mt-5 d-flex justify-content-between">
+    <% end %>
+     <%= link_to "/games?query=Indies", class: "d-flex flex-column justify-content-between game-category" do%>
+      <%= image_tag "pyramid.png", alt: "pyramid", width: 50 %>
+      <div>
      <h3 style="font-size:1.5em;" class="card-title">Indies</h3>
      <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
-     </div>
     </div>
-    <%# <% end %>
+    <% end %>
     </div>
 
   </div>
