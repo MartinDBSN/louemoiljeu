@@ -12,8 +12,8 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "Browse all games", games_path, style: "color:#D9D9D6;", class: "nav-link" %>
-            <%= link_to "Browse all games", games_path, style: "color:#D9D9D6;", class: "nav-link" %>
+            <%= link_to "Add a new game", new_game_path, style: "margin-right:2em;color:#D9D9D6;" %>
+            <%= link_to "Browse all games", games_path, style: "margin-right:2em;color:#D9D9D6;" %>
 
           </li>
           <li class="nav-item dropdown">
