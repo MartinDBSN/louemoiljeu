@@ -18,6 +18,7 @@
           <h4>
             <%= game.platform %>
           </h4>
+          <%= cl_image_tag game.photo.key, height: 160, crop: :fill %>
            <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
       <% end %>
     <% end %>
