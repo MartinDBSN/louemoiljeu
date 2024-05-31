@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3 style="font-family:syne;font-weight:bold">ADD A NEW GAME</h3>
+        <%= simple_form_for @game do |f| %>
+          <%= f.input :name, placeholder: 'ex: Grand Vol de Char IV' %>
+          <%= f.input :platform, placeholder: 'ex: StationdeJeu 4'%>
+          <%= f.input :genre, placeholder: 'ex: Action'%>
+          <%= f.input :price, placeholder: 'ex: 2€'%>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: 'button-submit' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
