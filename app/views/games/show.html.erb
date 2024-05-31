@@ -1,21 +1,31 @@
 <div class = "container-game-show">
   <div class = "big-container-show">
-    <img class="game-image" src="https://media.istockphoto.com/id/1208386205/vector/joystick-flat-icon-playing-online-gamepad-cartoon-icon-game-controller.jpg?s=612x612&w=0&k=20&c=0UCu7wJNNjJpIaUXe6zyLLXEk3ZX2onolq5aBrbQQY8=" alt="Game image">
+    <%= cl_image_tag @game.photo.key, width: 400, crop: :fill %>
     <div class="container-text-show">
           <h1 style="font-family:syne;font-weight:bold"><%= @game.name.upcase %></h1>
           <div class="mt-0">
-            <div class="d-inline p-2 bg-primary text-white rounded"><%= @game.platform.upcase %></div>
-            <div class="d-inline p-2 bg-dark text-white rounded"><%= @game.genre.upcase %></div>
-            <div class="d-inline p-2 bg-warning text-dark rounded"><%= @game.price %> €/day</div>
+          <div class="mt-0 d-flex">
+            <div class="p-1 m-2 bg-primary text-white rounded"><%= @game.platform.upcase %></div>
+            <div class="p-1 m-2 bg-dark text-white rounded"><%= @game.genre.upcase %></div>
+            <div class="p-1 m-2 bg-warning text-dark rounded"><%= @game.price %> €/day</div>
+            </div>
             <div class="game-description">
               <p>Description of the game</p>
             </div>
-            <div class="container-calendar">
-
-  <%= simple_form_for [@game, @rental] do |f| %>
-  <%= f.input :starting_date, as: :date, class: "form-control" %>
-  <%= f.input :ending_date, as: :date, class: "form-control" %>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+            <div data-controller="toggle" class="container-calendar ">
+              <button data-action="click->toggle#fire" class="btn btn-primary">Book the game</button>
+              <div data-toggle-target="togglableForm"class="d-none">
+              <%= simple_form_for [@game, @rental] do |f| %>
+                <p class="mt-2 mb-0">Starting date</p>
+                <%= f.date_field :starting_date, as: :date, min: Date.today, class: " form-control" %>
+                <p class="mt-2 mb-0">Ending date</p>
+                <%= f.date_field :ending_date, as: :date, class: " form-control" %>
+                <%= f.submit class: "mt-3 btn btn-success" %>
+              <% end %>
+              </div>
+            </div>
+          </div>
+    </div>
 
   </div>
+</div>
