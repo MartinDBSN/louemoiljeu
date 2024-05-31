@@ -1,6 +1,6 @@
 <div class = "container-game-show">
   <div class = "big-container-show">
-    <img class="game-image" src="https://media.istockphoto.com/id/1208386205/vector/joystick-flat-icon-playing-online-gamepad-cartoon-icon-game-controller.jpg?s=612x612&w=0&k=20&c=0UCu7wJNNjJpIaUXe6zyLLXEk3ZX2onolq5aBrbQQY8=" alt="Game image">
+    <%= cl_image_tag @game.photo.key, width: 400, crop: :fill %>
     <div class="container-text-show">
           <h1 style="font-family:syne;font-weight:bold"><%= @game.name.upcase %></h1>
           <div class="mt-0">

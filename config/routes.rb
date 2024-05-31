@@ -4,16 +4,16 @@ Rails.application.routes.draw do
 
   get '/games', to: 'games#index', as: :games
   get "/games/new", to: "games#new", as: :new_game
-
   get "/games/:id", to: "games#show", as: :game
   post "/games", to: "games#create"
 
-
   # RENTALS
-  # get '/rentals', to: 'rentals#index'
+
   post 'games/:game_id/rentals', to: 'rentals#create', as: :game_rentals
+  get 'users/:id/rentals', to: 'pages#user', as: :rentals
 
   get 'users/:id/rentals', to: 'pages#user', as: :rentals
+  post 'games/:game_id/rentals', to: 'rentals#create', as: :game_rentals
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
