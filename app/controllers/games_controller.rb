@@ -8,13 +8,24 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
+  def create
+    @game = Game.new(games_params)
+    @game.user = current_user
+    if @game.save
+      redirect_to game_path(@game)
+    else
+      render :new, status: :unprocessable_entity, notice: "hahaha"
+    end
+  end
+
   def show
     @game = Game.find(params[:id])
     @rental = Rental.new
   end
 
-  def new
-    @game = Game.new
-    @game.save
+  private
+
+  def games_params
+    params.require(:game).permit(:name, :platform, :genre, :price, :photo)
   end
 end
