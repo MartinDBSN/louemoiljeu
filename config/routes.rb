@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/rentals', to: 'rentals#index'
   post 'games/:game_id/rentals', to: 'rentals#create', as: :game_rentals
 
+  get 'users/:id/rentals', to: 'pages#user', as: :rentals
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

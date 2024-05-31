@@ -1,0 +1,26 @@
+.rentals-banner {
+  width: 100%;
+  height: 45px;
+  background-color: $blue;
+  border-radius: 15px;
+  color: $cream-gray;
+  text-align: left;
+  align-content: center;
+  margin-bottom: 10px;
+  padding: 0 20px;
+
+  h2 {
+    font-family: $monument-black-font;
+    font-size: 14px;
+    margin: 0px;
+  }
+}
+
+.red {
+  background-color: $red;
+}
+
+.rentals-carrousel {
+  display: flex;
+  
+}
