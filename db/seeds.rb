@@ -1,10 +1,6 @@
 
-
 require "open-uri"
 
-Rental.destroy_all
-Game.destroy_all
-User.destroy_all
 
 users = [
   {
@@ -100,16 +96,12 @@ images  = ["https://image.jeuxvideo.com/images-sm/p2/m/o/mohfp20f.jpg",
   "https://image.jeuxvideo.com/medias/148285/1482845269-1018-jaquette-avant.jpg"
 ]
 
-games.each do |game|
-  Game.create!(game)
+games.each_with_index do |game, i|
+  game = Game.create!(game)
+  p game
+  image = URI.open(images[i])
+  game.photo.attach(io: image, filename: "#{game.name}.jpg")
 end
-
-# games.each_with_index do |game, i|
-#   game = Game.create!(game)
-#   p game
-#   image = URI.open(images[i])
-#   game.photo.attach(io: image, filename: "#{game.name}.jpg")
-# end
 
 puts "Created #{Game.count} games!"
 
@@ -117,49 +109,49 @@ rentals = [
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 13,
+game_id: Game.all.sample.id,
     user_id: User.last.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 14,
+game_id: Game.all.sample.id,
     user_id: User.first.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 15,
+game_id: Game.all.sample.id,
     user_id: User.first.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 16,
+game_id: Game.all.sample.id,
     user_id: User.first.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 17,
+game_id: Game.all.sample.id,
     user_id: User.first.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 18,
+game_id: Game.all.sample.id,
     user_id: User.first.id
 
   },
   {
     starting_date: "Thu, 30 May 2024 10:18:32.391020000 UTC +00:00",
     ending_date: "Fri, 31 May 2024 10:18:32.391020000 UTC +00:00",
-    game_id: 19,
+game_id: Game.all.sample.id,
     user_id: User.first.id
   }
 ]
