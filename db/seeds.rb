@@ -1,6 +1,4 @@
-Game.destroy_all
-User.destroy_all
-p "Database cleaned Peeps"
+
 require "open-uri"
 
 
