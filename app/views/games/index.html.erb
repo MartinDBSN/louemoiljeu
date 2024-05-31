@@ -2,8 +2,14 @@
   <div class='header-banner'>
     <h1>Browse games</h1>
   </div>
-
+<div class="mt-2 mb-2"style="display:flex; justify-content:center;">
+  <%= form_with url: games_path, method: :get, class: "d-flex" do%>
+  <%= text_field_tag :query, params[:query], style: "width:69vw;border-radius:15px;background-color:#1B1B1B;border-color:#D9D9D6;", class: "placeholder-grey rounded form-control", placeholder: "Type a keyword" %>
+  <%= submit_tag "Search", name:"", class: "m-1 btn search-button-home" %>
+  <% end %>
+  </div>
   <div class="index-list">
+  <% if @games.any? %>
     <% @games.each do |game| %>
       <%= link_to game_path(game), class: "game-card" do %>
           <h3>
@@ -15,5 +21,11 @@
            <i style="border:1px solid black;border-radius:15px;"class="p-2 fa-solid fa-arrow-right"></i>
       <% end %>
     <% end %>
+  <% else %>
   </div>
+  <div style="text-align:center!important;">
+    <p class="no-matches">🤓<br> Sorry, nothing matches your search.</p>
+    </div>
+  <% end %>
+
 </div>
