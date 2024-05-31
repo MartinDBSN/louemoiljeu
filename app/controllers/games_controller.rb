@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     @games = Game.all
   end
@@ -9,5 +10,11 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @rental = Rental.new
+  end
+
+  def new
+    @game = Game.new
+    @game.save
   end
 end
