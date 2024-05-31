@@ -25,14 +25,14 @@ puts "Created #{User.count} users!"
 games = [
   { game: {
     name: "Médaille d'honneur",
-    platform: "PS2",
+    platform: "StationDeJeu 2",
     genre: "FPS",
     price: 5,
     user_id: User.last.id },
   },
   { game: {
     name: "Regarde les chiens",
-    platform: "JoueStation 4",
+    platform: "StationDeJeu 4",
     genre: "Action-RPG",
     price: 7,
     user_id: User.last.id },
@@ -46,22 +46,22 @@ games = [
   },
   { game: {
     name: "Besoin de vitesse asphalte",
-    platform: "Xboite 360",
+    platform: "StationDeJeu 4",
     genre: "Course",
     price: 12,
     user_id: User.last.id },
   },
   { game: {
     name: "Habibtant maleveillant 4",
-    platform: "Mac",
+    platform: "StationDeJeu 5",
     genre: "TPS",
     price: 6,
     user_id: User.last.id },
   },
   { game: {
     name: "007 oeil doré",
-    platform: "JoueStation 1",
-    genre: "Course",
+    platform: "Oui",
+    genre: "Action",
     price: 16,
     user_id: User.last.id },
   },
