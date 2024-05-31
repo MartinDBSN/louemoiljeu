@@ -20,40 +20,6 @@
   background-color: $red;
 }
 
-.rentals-carrousel {
-  width: 300px;
-  height: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg);
-  transform-origin: right top;
-  transform:rotate(-90deg) translateY(-100px);
-}
-
-.rental-card {
-  background-color: $cream-gray;
-  border-radius: 20px;
-  // height: 300px;
-  // width: 21%;
-  // min-width: 200px;
-  // flex-grow: 1;
-  padding: 20px;
-  color: $almost-black;
-  width: 300px;
-  height: 300px;
-  transform: rotate(90deg);
-  transform-origin: right top;
-
-  h3 {
-    font-family: $monument-regular-font;
-    font-size: 18px;
-  }
-
-  h4 {
-    font-family: $monument-regular-font;
-    font-size: 12px;
-  }
-}
 
 $finalHeight: 250px;
 $finalWidth: 3 * $finalHeight;
@@ -80,7 +46,6 @@ div {
   flex-shrink: 1;
   margin: 0;
   padding-top: $scrollBarHeight;
-  // background: #abc;
   overflow-y: auto;
   overflow-x: hidden;
   transform: rotate(-90deg) translateY(-$finalHeight);
@@ -88,7 +53,6 @@ div {
   & > div {
     display: block;
     padding: 5px;
-    background: #cab;
     transform: rotate(90deg);
     transform-origin: right top;
   }
@@ -102,6 +66,32 @@ div {
     width: $finalHeight;
     height: $finalHeight;
     margin-bottom: 10px;
+    padding: 20px;
+  }
+}
+
+.rental-card {
+  background-color: $cream-gray;
+  border-radius: 20px;
+  // height: 300px;
+  // width: 21%;
+  // min-width: 200px;
+  // flex-grow: 1;
+  padding: 20px;
+  color: $almost-black;
+  width: 300px;
+  height: 300px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+
+  h3 {
+    font-family: $monument-regular-font;
+    font-size: 16px;
+  }
+
+  h4 {
+    font-family: $monument-regular-font;
+    font-size: 10px;
   }
 }
 

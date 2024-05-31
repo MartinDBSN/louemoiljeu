@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   post "/games", to: "games#create"
 
   # RENTALS
+  get '/dashboard', to: 'rentals#index', as: :dashboard
+  post 'games/:game_id/rentals', to: 'rentals#create', as: :game_rentals
+
+
 
   post 'games/:game_id/rentals', to: 'rentals#create', as: :game_rentals
   get 'users/:id/rentals', to: 'pages#user', as: :rentals

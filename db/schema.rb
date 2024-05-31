@@ -55,11 +55,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_145437) do
 
   create_table "rentals", force: :cascade do |t|
     t.datetime "starting_date"
+    t.datetime "ending_date"
     t.bigint "game_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "ending_date"
     t.index ["game_id"], name: "index_rentals_on_game_id"
     t.index ["user_id"], name: "index_rentals_on_user_id"
   end

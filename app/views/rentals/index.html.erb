@@ -1,0 +1,41 @@
+<div class='page-container'>
+    <div class='rentals-banner'>
+      <h2>My games</h2>
+    </div>
+
+    <div class="carousel-container">
+      <div class="horizontal-scroll-wrapper squares">
+      <% current_user.games.select {|game| game.rentals.present?}.each do |game| %>
+        <div class="rental-card">
+          <h3>
+            <%= game.name %>
+          </h3>
+          <h4>
+          <%= game.platform %>
+          </h4>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+    <div class='rentals-banner red'>
+      <h2>My rentals</h2>
+    </div>
+
+    <div class="carousel-container">
+      <div class="horizontal-scroll-wrapper squares">
+        <% @rentals.where(user: current_user).each do |rental| %>
+        <div class="rental-card">
+          <h3>
+            <%= rental.game.name %>
+          </h3>
+          <h4>
+          <%= rental.game.platform %>
+          </h4>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
