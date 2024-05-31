@@ -1,5 +1,9 @@
 .game-image {
-  width: 30%;
+  min-width: 200px;
+  max-width: 550px;
+  height: 40%;
+  max-height: 550px;
+  margin-right: 1em;
 }
 
 .container-game-show {
@@ -12,11 +16,11 @@
 .big-container-show {
   display: flex;
   padding: 70px;
-  padding-left: 150px;
+
 }
 
 .container-text-show {
-  margin-left: 50px;
+  margin: 0 auto;
 }
 
 .book-btn {
@@ -34,8 +38,8 @@
 }
 
 .game-description {
-  margin: 20px;
   color: $cream-gray;
+  margin-top: 1em;
 }
 
 .container-calendar {
