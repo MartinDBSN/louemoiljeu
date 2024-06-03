@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 Game.destroy_all
 User.destroy_all
 Rental.destroy_all
 p "Database cleaned Peeps"
-=======
 
 
->>>>>>> 4d726a210ed9a6be6f0db324fd8ba77e78b7fc81
 require "open-uri"
 
 Rental.destroy_all
@@ -107,16 +104,13 @@ images  = ["https://image.jeuxvideo.com/images-sm/p2/m/o/mohfp20f.jpg",
   "https://image.jeuxvideo.com/medias/148285/1482845269-1018-jaquette-avant.jpg"
 ]
 
-<<<<<<< HEAD
 games.each_with_index do |game, i|
   game = Game.create!(game)
   p game
   image = URI.open(images[i])
   game.photo.attach(io: image, filename: "#{game.name}.jpg")
-=======
-games.each do |game|
-  Game.create!(game)
->>>>>>> 4d726a210ed9a6be6f0db324fd8ba77e78b7fc81
+
+
 end
 
 # games.each_with_index do |game, i|
